@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">My-CV-App</string>
+    <string name="txt_profile_name">Rizki Mahfuddin Harahap</string>
+    <string name="txt_specialist">Frontend Developer</string>
+    <string name="profile">Profile</string>
+    <string name="txt_bio">Saya mahasiswa Sistem Informasi di Universitas Pembangunan Nasional \'Veteran\' Yogyakarta semester 4. Setelah lulus kuliah saya ingin menjadi Front-End Developer Expert</string>
+    <string name="phone">Phone</string>
+    <string name="txt_phone">+62 821–3388–2546</string>
+    <string name="e_mail">E-Mail</string>
+    <string name="txt_email">rizkyhh1999@gmail.com</string>
+    <string name="address">Address</string>
+    <string name="txt_address">Gg Senden 02, Sorogenen 2, Purwomartani, Selman, Yogyakarta</string>
+    <string name="personal_skill">Personal Skill</string>
+    <string name="self_motivation">Self-Motivation</string>
+    <string name="fast_working">Fast Working</string>
+    <string name="fast_learning">Fast Learning</string>
+    <string name="responsibility">Responsibility</string>
+    <string name="tech_skill">Tech Skill</string>
+    <string name="c">C++</string>
+    <string name="java">Java</string>
+    <string name="web_design">Web Design</string>
+    <string name="my_project">My Project</string>
 </resources>

@@ -1,18 +1,216 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:background="@drawable/gradient_background">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:src="@drawable/img_profile"
+                android:layout_marginTop="30dp"/>
+
+            <TextView
+                style="@style/TextContent.Banner"
+
+                android:layout_marginTop="@dimen/dimen_vertical"
+                android:text="@string/txt_profile_name"
+                android:textSize="20sp"
+                android:fontFamily="@font/quicksand_bold"/>
+
+            <TextView
+
+                style="@style/TextContent.Banner"
+                android:fontFamily="@font/quicksand"
+                android:text="@string/txt_specialist"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dimen_vertical"
+                android:layout_marginBottom="@dimen/dimen_horizontal">
+
+                <ImageView
+                    style="@style/BannerSocialLogo"
+                    android:src="@drawable/linkedin_logo" />
+                <ImageView
+                    style="@style/BannerSocialLogo"
+                    android:src="@drawable/github_logo"/>
+                <ImageView
+                    style="@style/BannerSocialLogo"
+                    android:src="@drawable/instagram_logo"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_horizontal"
+            android:layout_marginEnd="@dimen/dimen_horizontal"
+            android:layout_marginBottom="@dimen/dimen_horizontal">
+
+            <TextView
+                style="@style/TextTitle"
+                android:id="@+id/title_profile"
+                android:text="@string/profile"/>
+
+            <TextView
+                style="@style/TextSpec"
+                android:id="@+id/bio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_bio"
+                android:textColor="@android:color/black"
+                android:layout_below="@id/title_profile"
+                android:paddingBottom="@dimen/dimen_vertical"
+                android:background="@drawable/underline"/>
+
+            <TableLayout
+                android:id="@+id/table_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dimen_vertical"
+                android:paddingBottom="@dimen/dimen_vertical"
+                android:layout_below="@id/bio">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/underline">
+
+                    <TextView
+                        style="@style/TextSpec.Field"
+                        android:text="@string/phone"
+                        android:textAlignment="textStart" />
+                    <TextView
+                        style="@style/TextSpec.Value"
+                        android:text="@string/txt_phone"
+                        android:textAlignment="textEnd"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/underline">
+                    <TextView
+                        style="@style/TextSpec.Field"
+                        android:text="@string/e_mail"
+                        android:textAlignment="textStart"/>
+                    <TextView
+                        style="@style/TextSpec.Value"
+                        android:text="@string/txt_email"
+                        android:textAlignment="textEnd"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/underline">
+                    <TextView
+                        style="@style/TextSpec.Field"
+                        android:text="@string/address"
+                        android:textAlignment="textStart"/>
+                    <TextView
+                        style="@style/TextSpec.Value"
+                        android:text="@string/txt_address"
+                        android:textAlignment="textEnd"/>
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                style="@style/TextTitle"
+                android:id="@+id/title_skill"
+                android:text="@string/personal_skill"
+                android:layout_below="@id/table_profile"/>
+
+            <Button
+                style="@style/TextButton"
+                android:id="@+id/btn_skill_1"
+                android:text="@string/self_motivation"
+                android:layout_below="@id/title_skill"/>
+            <Button
+                style="@style/TextButton"
+                android:text="@string/fast_working"
+                android:layout_toEndOf="@id/btn_skill_1"
+                android:layout_below="@id/title_skill"/>
+            <Button
+                style="@style/TextButton"
+                android:id="@+id/btn_skill_3"
+                android:text="@string/fast_learning"
+                android:layout_below="@id/btn_skill_1"/>
+            <Button
+                style="@style/TextButton"
+                android:text="@string/responsibility"
+                android:layout_below="@id/btn_skill_1"
+                android:layout_toEndOf="@id/btn_skill_3"/>
+
+            <TextView
+                android:id="@+id/title_tech"
+                style="@style/TextTitle"
+                android:text="@string/tech_skill"
+                android:layout_below="@id/btn_skill_3"/>
+
+            <Button
+                style="@style/TextButton"
+                android:id="@+id/btn_tech_1"
+                android:text="@string/c"
+                android:layout_below="@id/title_tech"/>
+            <Button
+                style="@style/TextButton"
+                android:id="@+id/btn_tech_2"
+                android:text="@string/java"
+                android:layout_toEndOf="@id/btn_tech_1"
+                android:layout_below="@id/title_tech"/>
+            <Button
+                style="@style/TextButton"
+                android:id="@+id/btn_tech_3"
+                android:text="@string/web_design"
+                android:layout_toEndOf="@id/btn_tech_2"
+                android:layout_below="@id/title_tech"/>
+
+            <TextView
+                style="@style/TextTitle"
+                android:id="@+id/title_project"
+                android:text="@string/my_project"
+                android:layout_below="@id/btn_tech_3"/>
+
+            <ImageView
+                style="@style/ProjectImage"
+                android:id="@+id/img_project_1"
+                android:src="@mipmap/demupnvyk_web"
+                android:layout_width="wrap_content"
+                android:layout_height="220dp"
+                android:layout_below="@id/title_project"/>
+
+            <ImageView
+                android:id="@+id/img_project_2"
+                style="@style/ProjectImage"
+                android:layout_below="@id/img_project_1"
+                android:src="@mipmap/bundesliga_webapp" />
+            <ImageView
+                style="@style/ProjectImage"
+                android:src="@mipmap/moviecatalog_app"
+                android:layout_toEndOf="@id/img_project_2"
+                android:layout_below="@id/img_project_1"/>
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>
